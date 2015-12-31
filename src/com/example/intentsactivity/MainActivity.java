@@ -68,6 +68,13 @@ public class MainActivity extends Activity implements OnTouchListener, OnClickLi
 			{
 				//Mostrar la otra pantalla
 				Intent act2 = new Intent("com.example.intentsactivity.Actividad2");
+				
+				//Pasar datos a otra actividad
+				Bundle datos = new Bundle();
+				
+				datos.putString("nombreKey", nombre);
+				act2.putExtras(datos);
+				
 				startActivity(act2);
 			}
 			else
